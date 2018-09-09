@@ -11,7 +11,6 @@ A repository for learning new programming or technology as self study materials.
 
 ## Learning Sources
   * Kotlin
-    
-    https://www.udemy.com/hello-kotlin/learn/v4/overview
+    * https://www.udemy.com/hello-kotlin/learn/v4/overview
   * Golang
   * Electron
