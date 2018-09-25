@@ -2,9 +2,9 @@
 #   UserInput.py
 #   Demonstrate user input interaction
 #
-#   @package	LearnCode
-#   @author		Dimas Wicaksono
-#   @since		2018-45-24
+#   @package    LearnCode
+#   @author     Dimas Wicaksono
+#   @since      2018-45-24
 ##
 
 # get user input
