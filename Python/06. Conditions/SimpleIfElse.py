@@ -7,20 +7,6 @@
 #   @since		2018-57-25
 ##
 
-"""
-    Condition:
-    i wake up
-    if i hungry
-        i eat breakfast
-
-    if it's weekday
-        i'll go to work
-        if it's cloudy
-            i'll bring an umbrella
-        otherwise
-            i'll bring sunglasses
-"""
-
 # predefine condition
 person_name = "John"
 is_male = True
