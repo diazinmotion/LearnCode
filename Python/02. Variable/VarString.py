@@ -38,3 +38,11 @@ print(f"Word Index: {phrase.index('Acad')}")
 
 # Text Replace
 print(phrase.replace("Giraffe", "Elephant"))
+
+# joining an array, just like php's implode
+simple_array = ['eggs', 'pie', 'pizza']
+print(", ".join(simple_array))
+
+# splitting a string to an array
+simple_string = "Hello World Python"
+print(simple_string.split(" "))
