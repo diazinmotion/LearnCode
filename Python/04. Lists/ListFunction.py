@@ -56,3 +56,15 @@ print(lucky_words)
 # copy a list
 lucky_words2 = lucky_words.copy()
 print(lucky_words2)
+
+# to check whether an item exist on an array
+lucky_numbers = [9, 4, 3, 2, 6, 7, 9]
+if any([2 for i in lucky_numbers]):
+    print("2 is exist")
+
+# check if all member of an array match the criteria
+print(all([i > 10 for i in lucky_numbers]))
+
+# enumerate
+for v in enumerate(lucky_numbers):
+    print(v)
