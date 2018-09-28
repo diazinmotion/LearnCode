@@ -16,6 +16,12 @@ person_job  = "Singer"
 # normal string outputting
 print("My name is "+ person_name +" and i'm "+ person_age +" years old.")
 
+# more like a C style outputting
+print("My Name is {0}, i'm {1} years old and i'm a {2}".format(person_name, person_age, person_job))
+
+# variable aliasing
+print("My Name is {x}, i'm {y} years old and i'm a {z}".format(x = person_name, y = person_age, z = person_job))
+
 # outputting directly within string
 print(f"My job is {person_job}")
 

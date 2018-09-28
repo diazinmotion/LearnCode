@@ -24,6 +24,12 @@ print(friends[1:])
 # this will grab array member until before the last index range (2)
 print(friends[1:2])
 
+# the third param will skip to selected number of array
+print(friends[1::2])
+
+# this will reverse the array backward
+print(friends[::-1])
+
 # modify array
 friends[0] = "Kino"
 print(friends)
