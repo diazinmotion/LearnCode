@@ -15,5 +15,11 @@ A repository for learning new programming or technology as self study materials.
     * https://www.udemy.com/the-total-kotlin-course-learn-kotlin-today/learn/v4
   * Python
     * https://www.youtube.com/watch?v=rfscVS0vtbw
+	* https://www.sololearn.com/Play/Python/
+  * Docker
+    * https://www.youtube.com/watch?v=Kyx2PsuwomE
+	* https://www.youtube.com/watch?v=hP77Rua1E0c
+	* https://www.youtube.com/watch?v=YFl2mCHdv24&t=475s
+	* https://www.youtube.com/watch?v=Qw9zlE3t8Ko
   * Golang
   * Electron
