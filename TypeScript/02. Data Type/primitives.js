@@ -16,3 +16,9 @@ myRealAge = '27';
 var myAgeType;
 myAgeType = 25;
 // myAgeType = '27' // will throw an error
+// any datatype
+var car = "BMW";
+console.log(car);
+// set to json object
+car = { brand: "BMW", color: "Red" };
+console.log(car);

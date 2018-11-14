@@ -20,3 +20,11 @@ myRealAge = '27';
 let myAgeType: number;
 myAgeType = 25
 // myAgeType = '27' // will throw an error
+
+// any datatype
+let car: any = "BMW";
+console.log(car);
+
+// set to json object
+car = {brand: "BMW", color: "Red"};
+console.log(car);
