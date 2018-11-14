@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>TypeScript Learning Demo</title>
+        <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-md mb-4" style="background: #294E80">
+            <a class="text-white font-weight-bold" href="#"><i class="fa fa-code"></i> TypeScript Tutorial</a>
+        </nav>
+        <main role="main" class="container mt-3">
+            <div class="card">
+                <div class="card-header bg-primary">
+                    <strong class="card-title text-white">Table of Contents</strong>
+                </div>
+                <div class="card-body">
+                    <span>Please choose the chapter below to see the demo.</span>
+                    <ul class="list-group chapter-list mt-3">
+                        <li class="list-group-item">
+                            <a href="http://"></a>
+                        </li>
+                    </ul>
+                </div> 
+            </div>
+        </main>
+
+        <!-- SCRIPTS -->
+        <script>
+            loadJSON(function(response) {
+                // Parse JSON string into object
+                var actual_JSON = JSON.parse(response);
+                
+                // HTML list
+                strList = '';
+                for (let index = 0; index < actual_JSON.length; ++index) {
+                    strList += '<li class="list-group-item"><a href="' + actual_JSON[index].title + '/index.html">' + actual_JSON[index].title + '</a></li>';
+                }
+
+                document.querySelector(".chapter-list").innerHTML = strList;
+            });
+
+            function loadJSON(callback) {   
+                var xobj = new XMLHttpRequest();
+                xobj.overrideMimeType("application/json");
+                xobj.open('GET', 'chapters.json', true); // Replace 'my_data' with the path to your file
+                xobj.onreadystatechange = function () {
+                    if (xobj.readyState == 4 && xobj.status == "200") {
+                        // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+                        callback(xobj.responseText);
+                    }
+                };
+                xobj.send(null);  
+            }
+        </script>
+        <!-- END SCRIPTS -->
+    </body>
+</html>

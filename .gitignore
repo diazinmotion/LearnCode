@@ -3,3 +3,7 @@
 Python/.idea/*
 Python/venv/*
 *.pyc
+
+
+# NPM
+TypeScript/node_modules/*
