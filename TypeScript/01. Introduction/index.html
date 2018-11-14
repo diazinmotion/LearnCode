@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Demo</title>
+        <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md mb-4" style="background: #294E80">
+            <a class="text-white font-weight-bold" href="/"><i class="fa fa-home"></i> Main Page</a>
+            <span class="text-white pl-3">
+                Chapter: <span id="chapter-title">N/A</span>
+            </span>
+        </nav>
+        <main role="main" class="container mt-3">
+            <div class="jumbotron">
+                <h1>TypeScript Demo</h1>
+                <p class="lead">Demo page for TypeScript. Check the console if this page is empty.</p>
+            </div>
+        </main>
+
+        <!-- SCRIPTS -->
+        <script src="app.js"></script>
+
+        <script>
+            var title = document.querySelector('#chapter-title');
+            strTitle = decodeURIComponent(window.location.href.split('/')[3]);
+            
+            // set the page's title
+
+            title.textContent = strTitle;
+            document.querySelector('title').textContent = "TypeScript: " + strTitle;
+        </script>
+        <!-- END SCRIPTS -->
+    </body>
+</html>
