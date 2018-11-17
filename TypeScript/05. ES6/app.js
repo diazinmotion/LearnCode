@@ -32,10 +32,10 @@ var multiplyNumbers = function (number1, number2) {
 console.log(multiplyNumbers(9, 33));
 // arrow function variation
 // no parameters argument
-var greet = function () {
+var greetES6Prob = function () {
     console.log("Hello");
 };
-greet();
+greetES6Prob();
 var greetFriend = function (friend) { return console.log(friend); };
 greetFriend("Dave");
 // default param

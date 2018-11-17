@@ -38,10 +38,10 @@ console.log(multiplyNumbers(9, 33));
 
 // arrow function variation
 // no parameters argument
-const greet = () => {
+const greetES6Prob = () => {
     console.log("Hello");
 }
-greet();
+greetES6Prob();
 
 const greetFriend = (friend: string) => console.log(friend);
 greetFriend("Dave");
