@@ -3,9 +3,17 @@ A repository for learning new programming or technology as self study materials.
 
 ## Overview
 <dl>
-  <dt><a href="https://kotlinlang.org/">Kotlin</a></dt>
+  <dt><a href="https://kotlinlang.org">Kotlin</a></dt>
   <dd>
-    Statically typed programming language for modern multiplatform applications. 100% interoperable with Java™ and Android™ created by <a href="https://tetbrains.com/">JetBrains.</a>
+    Statically typed programming language for modern multiplatform applications. 100% interoperable with Java™ and Android™ created by <a href="https://tetbrains.com">JetBrains.</a>
+  </dd>
+  <dt><a href="https://typescriptlang.org">TypeScript</a></dt>
+  <dd>
+    An open-source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript, and adds optional static typing to the language. TypeScript is designed for development of large applications and transcompiles to JavaScript. As TypeScript is a superset of JavaScript, existing JavaScript programs are also valid TypeScript programs. TypeScript may be used to develop JavaScript applications for both client-side and server-side (Node.js) execution.
+  </dd>
+  <dt><a href="https://www.python.org">Python</a></dt>
+  <dd>
+    Python is an interpreted high-level programming language for general-purpose programming. Created by Guido van Rossum and first released in 1991, Python has a design philosophy that emphasizes code readability, notably using significant whitespace. It provides constructs that enable clear programming on both small and large scales.
   </dd>
 </dl>
 
