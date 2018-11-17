@@ -88,3 +88,9 @@ console.log(username, age);
 // or we can assign a custom name
 var uName1 = userData6.username, uAge1 = userData6.age;
 console.log(uName1, uAge1);
+// template literals
+var userName7 = "Max";
+// const greeting = "Hello, I'm " + userName7 + ", I'm so cool!";
+// complex string (multiline)
+var greeting = "This is a heading!\nI'm " + userName7 + ".\nThis is cool!\n";
+console.log(greeting);

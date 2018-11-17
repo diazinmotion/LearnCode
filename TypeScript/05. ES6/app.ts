@@ -100,4 +100,14 @@ console.log(username, age);
 const {username: uName1, age: uAge1} = userData6;
 console.log(uName1, uAge1);
 
+// template literals
+const userName7 = "Max";
+// const greeting = "Hello, I'm " + userName7 + ", I'm so cool!";
+// complex string (multiline)
+const greeting = `This is a heading!
+I'm ${userName7}.
+This is cool!
+`;
+console.log(greeting);
+
 
