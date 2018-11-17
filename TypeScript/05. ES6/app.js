@@ -76,3 +76,15 @@ console.log(hobbies61, hobbies62);
 // the better way
 var hobby1 = hobbies6[0], hobby2 = hobbies6[1];
 console.log(hobby1, hobby2);
+// destructuring objects
+var userData6 = { username: "Max", age: 27 };
+var uName = userData6.username;
+var uAge = userData6.age;
+console.log(uName, uAge);
+// the better way
+// {username, age} must fit with index name on the object data
+var username = userData6.username, age = userData6.age;
+console.log(username, age);
+// or we can assign a custom name
+var uName1 = userData6.username, uAge1 = userData6.age;
+console.log(uName1, uAge1);

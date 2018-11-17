@@ -85,4 +85,19 @@ console.log(hobbies61, hobbies62);
 const [hobby1, hobby2] = hobbies6;
 console.log(hobby1, hobby2);
 
+// destructuring objects
+const userData6 = {username: "Max", age: 27};
+const uName = userData6.username;
+const uAge = userData6.age;
+console.log(uName, uAge);
+
+// the better way
+// {username, age} must fit with index name on the object data
+const {username, age} = userData6;
+console.log(username, age);
+
+// or we can assign a custom name
+const {username: uName1, age: uAge1} = userData6;
+console.log(uName1, uAge1);
+
 
