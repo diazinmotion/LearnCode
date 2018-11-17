@@ -9,6 +9,7 @@ hobbies = [100];
 var address = ["Normal Street", 90];
 // enum
 var Color;
+// enum
 (function (Color) {
     Color[Color["Grey"] = 0] = "Grey";
     Color[Color["Green"] = 1] = "Green";
@@ -16,6 +17,7 @@ var Color;
 })(Color || (Color = {}));
 // we can set custom number for enum
 var CustomColor;
+// we can set custom number for enum
 (function (CustomColor) {
     CustomColor[CustomColor["Red"] = 52] = "Red";
     CustomColor[CustomColor["Orange"] = 100] = "Orange";

@@ -24,8 +24,10 @@
         </main>
 
         <!-- SCRIPTS -->
-        <script src="app.js"></script>
-
+        <script src="../node_modules/systemjs/dist/system.js"></script>
+        <script>
+            System.import('./app.js');
+        </script>
         <script>
             var title = document.querySelector('#chapter-title');
             strTitle = decodeURIComponent(window.location.href.split('/')[3]);

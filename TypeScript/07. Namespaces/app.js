@@ -1,26 +1,4 @@
-var MyMath;
-(function (MyMath) {
-    // nested namespaces
-    var Circle;
-    (function (Circle) {
-        var PI = 3.14;
-        // export mean we can use this method outside
-        // of the namespace
-        function calcCircumference(diameter) {
-            return diameter * PI;
-        }
-        Circle.calcCircumference = calcCircumference;
-    })(Circle = MyMath.Circle || (MyMath.Circle = {}));
-})(MyMath || (MyMath = {}));
-var MyMath;
-(function (MyMath) {
-    // export mean we can use this method outside
-    // of the namespace
-    function calcRectangle(width, length) {
-        return width * length;
-    }
-    MyMath.calcRectangle = calcRectangle;
-})(MyMath || (MyMath = {}));
+"use strict";
 // namespaces
 // we use namespace to mitigate the risk of conflict
 // between each method or variable
@@ -35,6 +13,10 @@ var MyMath;
 //         return width * length;
 //     }
 // }
+// Manual Bundle (optional)
+// to import the circleMath & rectangleMath
+// we can bndle it into a single file with this command:
+// tsc app.ts --outfile app.js [script1] [script2] [script3]
 // the better way importing namespace
 /// <reference path="circleMath.ts" />
 /// <reference path="rectangleMath.ts" />
@@ -49,7 +31,3 @@ console.log(MyMath.calcRectangle(10, 20));
 console.log(MyMath.Circle.calcCircumference(3));
 console.log(CircleMath.calcCircumference(3));
 console.log(PI);
-// Manual Bundle (optional)
-// to import the circleMath & rectangleMath
-// we can bndle it into a single file with this command:
-// tsc app.ts --outfile app.js [script1] [script2] [script3]
