@@ -102,3 +102,29 @@ var Helpers = /** @class */ (function () {
 }());
 console.log(2 * Helpers.PI);
 console.log(Helpers.calcCircumference(8));
+// abstract class
+var Project = /** @class */ (function () {
+    function Project() {
+        this.projectName = "Default";
+        this.budget = 1000;
+    }
+    Project.prototype.calcBudget = function () {
+        return this.budget;
+    };
+    return Project;
+}());
+// normal class
+var ITProject = /** @class */ (function (_super) {
+    __extends(ITProject, _super);
+    function ITProject() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    ITProject.prototype.changeName = function (name) {
+        this.projectName = name;
+    };
+    return ITProject;
+}(Project));
+var newProject = new ITProject();
+console.log(newProject);
+newProject.changeName("Super IT Project");
+console.log(newProject);
