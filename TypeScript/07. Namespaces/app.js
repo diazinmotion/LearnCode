@@ -1,12 +1,16 @@
 var MyMath;
 (function (MyMath) {
-    var PI = 3.14;
-    // export mean we can use this method outside
-    // of the namespace
-    function calcCircumference(diameter) {
-        return diameter * PI;
-    }
-    MyMath.calcCircumference = calcCircumference;
+    // nested namespaces
+    var Circle;
+    (function (Circle) {
+        var PI = 3.14;
+        // export mean we can use this method outside
+        // of the namespace
+        function calcCircumference(diameter) {
+            return diameter * PI;
+        }
+        Circle.calcCircumference = calcCircumference;
+    })(Circle = MyMath.Circle || (MyMath.Circle = {}));
 })(MyMath || (MyMath = {}));
 var MyMath;
 (function (MyMath) {
@@ -36,10 +40,14 @@ var MyMath;
 /// <reference path="rectangleMath.ts" />
 // and then execute the command:
 // tsc app.ts --outfile app.js
+var CircleMath = MyMath.Circle;
 // will not conflict since it's not on namespace (global scope)
 var PI = 2.99;
 console.log(MyMath.calcRectangle(10, 20));
-console.log(MyMath.calcCircumference(3));
+// console.log(MyMath.calcCircumference(3));
+// access nested namespace just like in PHP
+console.log(MyMath.Circle.calcCircumference(3));
+console.log(CircleMath.calcCircumference(3));
 console.log(PI);
 // Manual Bundle (optional)
 // to import the circleMath & rectangleMath

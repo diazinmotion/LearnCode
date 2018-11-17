@@ -21,11 +21,16 @@
 // and then execute the command:
 // tsc app.ts --outfile app.js
 
+import CircleMath = MyMath.Circle;
+
 // will not conflict since it's not on namespace (global scope)
 const PI = 2.99;
 
 console.log(MyMath.calcRectangle(10, 20));
-console.log(MyMath.calcCircumference(3));
+// console.log(MyMath.calcCircumference(3));
+// access nested namespace just like in PHP
+console.log(MyMath.Circle.calcCircumference(3));
+console.log(CircleMath.calcCircumference(3));
 console.log(PI);
 
 // Manual Bundle (optional)
