@@ -8,5 +8,6 @@
     {"title":"07. Namespaces"},
     {"title":"08. Modules"},
     {"title":"09. Interfaces"},
-    {"title":"10. Generics"}
+    {"title":"10. Generics"},
+    {"title":"11. Decorators"}
 ]
