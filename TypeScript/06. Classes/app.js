@@ -128,3 +128,29 @@ var newProject = new ITProject();
 console.log(newProject);
 newProject.changeName("Super IT Project");
 console.log(newProject);
+// private constructor (TSv2)
+// singleton pattern
+// singleton is a pattern that only allow single instance
+// throughout the app lifecycle
+var OnlyOne = /** @class */ (function () {
+    // we made it private so, outer access cant initiate this class
+    // private constructor(public name: string) {}
+    // readonly properties
+    function OnlyOne(name) {
+        this.name = name;
+    }
+    OnlyOne.getInstance = function () {
+        // if we dont have the instance yet, lets create it.
+        if (!OnlyOne.instance) {
+            OnlyOne.instance = new OnlyOne('The Only One');
+        }
+        // if already had, just return the existing instance.
+        return OnlyOne.instance;
+    };
+    return OnlyOne;
+}());
+// let wrong = new OnlyOne("The Only One"); // wrong because we cant create any other instance
+var rigth = OnlyOne.getInstance();
+console.log(rigth.name);
+// if the property is reaonly then this will be error.
+// rigth.name = "Something Else";
