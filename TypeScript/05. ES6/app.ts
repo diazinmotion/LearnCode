@@ -74,4 +74,15 @@ console.log(makeArray("Max", 1, 2, 3));
 
 // destructuring an array
 console.log("Destructuring");
+const hobbies6 = ["Cooking", "Sports"];
+
+// store in variable
+const hobbies61 = hobbies6[0];
+const hobbies62 = hobbies6[1];
+console.log(hobbies61, hobbies62);
+
+// the better way
+const [hobby1, hobby2] = hobbies6;
+console.log(hobby1, hobby2);
+
 

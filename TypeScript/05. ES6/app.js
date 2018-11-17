@@ -68,3 +68,11 @@ function makeArray(name) {
 console.log(makeArray("Max", 1, 2, 3));
 // destructuring an array
 console.log("Destructuring");
+var hobbies6 = ["Cooking", "Sports"];
+// store in variable
+var hobbies61 = hobbies6[0];
+var hobbies62 = hobbies6[1];
+console.log(hobbies61, hobbies62);
+// the better way
+var hobby1 = hobbies6[0], hobby2 = hobbies6[1];
+console.log(hobby1, hobby2);
