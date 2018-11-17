@@ -32,7 +32,9 @@ const echo2: <T>(data: T) => T = betterEcho;
 console.log(echo2<string>("Something"));
 
 // generic class
-class SimpleMath<T> {
+// we can extends T to specify existing type
+// number | string means generic with constraint
+class SimpleMath<T extends number | string> {
     baseValue: T;
     multiplyValue: T;
     calculate(): number {
@@ -45,7 +47,7 @@ class SimpleMath<T> {
     }
 }
 
-const simpleMath = new SimpleMath();
-simpleMath.baseValue = 10;
-simpleMath.multiplyValue = 10;
+const simpleMath = new SimpleMath<string>();
+simpleMath.baseValue = "20";
+simpleMath.multiplyValue = "10";
 console.log(simpleMath.calculate());

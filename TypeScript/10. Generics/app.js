@@ -28,6 +28,8 @@ printAll(['Apple', 'Orange', 'Banana']);
 var echo2 = betterEcho;
 console.log(echo2("Something"));
 // generic class
+// we can extends T to specify existing type
+// number | string means generic with constraint
 var SimpleMath = /** @class */ (function () {
     function SimpleMath() {
     }
@@ -42,6 +44,6 @@ var SimpleMath = /** @class */ (function () {
     return SimpleMath;
 }());
 var simpleMath = new SimpleMath();
-simpleMath.baseValue = 10;
-simpleMath.multiplyValue = 10;
+simpleMath.baseValue = "20";
+simpleMath.multiplyValue = "10";
 console.log(simpleMath.calculate());
