@@ -8,3 +8,12 @@ anything = 12;
 // will still compile it to the js file
 // if noEmitonError set to true
 // myName6 = 22;
+
+function controlMe(isTrue: boolean, somethingElse: boolean) {
+    let result_cm: number;
+    if(isTrue){
+        result_cm = 12;
+    }
+    result_cm = 33;
+    return result_cm;
+}
