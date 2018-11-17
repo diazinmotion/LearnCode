@@ -15,6 +15,11 @@
 //     }
 // }
 
+// Manual Bundle (optional)
+// to import the circleMath & rectangleMath
+// we can bndle it into a single file with this command:
+// tsc app.ts --outfile app.js [script1] [script2] [script3]
+
 // the better way importing namespace
 /// <reference path="circleMath.ts" />
 /// <reference path="rectangleMath.ts" />
@@ -32,8 +37,3 @@ console.log(MyMath.calcRectangle(10, 20));
 console.log(MyMath.Circle.calcCircumference(3));
 console.log(CircleMath.calcCircumference(3));
 console.log(PI);
-
-// Manual Bundle (optional)
-// to import the circleMath & rectangleMath
-// we can bndle it into a single file with this command:
-// tsc app.ts --outfile app.js [script1] [script2] [script3]
