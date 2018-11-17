@@ -34,12 +34,12 @@ var Person = /** @class */ (function () {
     };
     return Person;
 }());
-var person = new Person("Max", "max90");
-console.log(person);
+var personmod = new Person("Max", "max90");
+console.log(personmod);
 // can access the property inside the class (access modifiers)
-console.log(person.name, person.username);
+console.log(personmod.name, personmod.username);
 // access private properties
-person.printAge();
+personmod.printAge();
 // person.setType("Cool Guy!"); // Won't work with private method
 // inheritance
 console.log("Inheritance");
