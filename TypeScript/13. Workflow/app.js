@@ -1,13 +1,5 @@
-System.register(["jQuery"], function (exports_1, context_1) {
-    "use strict";
-    var __moduleName = context_1 && context_1.id;
-    return {
-        setters: [
-            function (_1) {
-            }
-        ],
-        execute: function () {
-            $('#app').css({ "background-color": "red" });
-        }
-    };
-});
+"use strict";
+exports.__esModule = true;
+// simple jquery
+require("jQuery");
+$('#app').css({ "background-color": "red" });
