@@ -1,0 +1,6 @@
+npm install -g lite-server
+npm start
+npm install -g typings
+typings install --global --save dt~jquery (dt~ means we fetch it from definately typed repo)
+npm install --save-dev @types/jquery (TS built-in)
+npm install --save-dev webpack ts-loader
