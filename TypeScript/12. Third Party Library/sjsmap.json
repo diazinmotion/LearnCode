@@ -1,0 +1,5 @@
+{
+    "packages": {
+        "jQuery": "../../node_modules/jQuery/dist/jquery.min.js"
+    }
+}
