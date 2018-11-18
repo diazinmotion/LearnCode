@@ -5,16 +5,93 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-// decorators
+// decorators (ES7 feature)
 // we must attach constructor param as argument
 function logged(constructorFn) {
     console.log(constructorFn);
 }
 var PersonD = /** @class */ (function () {
     function PersonD() {
+        console.log("Hi");
     }
     PersonD = __decorate([
         logged
     ], PersonD);
     return PersonD;
 }());
+// factory decorator
+// this is not a decorator function
+// this is only a factory method for a decorator function
+function logging(val) {
+    return val ? logged : null;
+}
+var CarD = /** @class */ (function () {
+    function CarD() {
+    }
+    CarD = __decorate([
+        logging(false)
+    ], CarD);
+    return CarD;
+}());
+// useful decorator (advanced)
+function printable(constructorFn) {
+    // constructorFn.prototype.print = function() {
+    //     console.log(this);
+    // }
+    constructorFn.prototype.cetak = function () {
+        console.log(this);
+    };
+}
+// multiple decorator implementation
+var PlantD = /** @class */ (function () {
+    function PlantD() {
+        this.name = "Green Plant";
+    }
+    PlantD = __decorate([
+        logging(true),
+        printable
+    ], PlantD);
+    return PlantD;
+}());
+var plantD = new PlantD();
+plantD.cetak();
+// method decorator
+function editable(value) {
+    return function (target, propName, descriptor) {
+        descriptor.writable = value;
+    };
+}
+// property decorator
+function overwritable(val) {
+    return function (target, propName) {
+        var newDescriptor = {
+            writable: val
+        };
+        return newDescriptor;
+    };
+}
+var ProjectD = /** @class */ (function () {
+    function ProjectD(name) {
+        this.projectName = name;
+    }
+    ProjectD.prototype.calcBudget = function () {
+        console.log(1000);
+    };
+    __decorate([
+        overwritable(false)
+    ], ProjectD.prototype, "projectName", void 0);
+    __decorate([
+        editable(false)
+    ], ProjectD.prototype, "calcBudget", null);
+    return ProjectD;
+}());
+var projectd = new ProjectD("Super Project");
+projectd.calcBudget();
+// object method overriden
+// if we put decorator to a class method this 
+// overriding not gonna work, since it's a read only
+// stated by the decorator @editable(false)
+// projectd.calcBudget = function() {
+//     console.log(2000);
+// }
+projectd.calcBudget();
