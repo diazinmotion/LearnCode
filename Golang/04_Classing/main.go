@@ -1,16 +1,14 @@
 package main
 
-import (
-	"fmt"
-)
-
 func main() {
-	cards := deck{"Ace of Diamonds", "Five of Diamond"}
+	// using 'deck' type
+	cards := newCard()
+	cards.print()
 
-	for i, e := range cards {
-		fmt.Println(i, e)
-	}
+	// for people 'class'
+	// people := newPeopleGroup()
+	// people.print()
 
 	// run it with command:
-	// go run main.go deck.go
+	// go run main.go deck.go people.go
 }
