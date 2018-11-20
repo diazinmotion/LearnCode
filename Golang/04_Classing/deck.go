@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 // instead of traditional OOP, Go has different
 // approach for classing which is creating a type
@@ -35,4 +38,17 @@ func (d deck) print() {
 	for i, e := range d {
 		fmt.Println(i, e)
 	}
+}
+
+// demo of function
+// multiple param
+// d deck works as 'this/self'
+// (deck, deck) -> multiple return value
+func deal(d deck, handSize int) (deck, deck) {
+	// this return 2 value at the same time
+	return d[:handSize], d[handSize:]
+}
+
+func (d deck) toString() string {
+	return strings.Join([]string(d), ",")
 }
