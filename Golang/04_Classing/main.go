@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
 func main() {
 	// using 'deck' type
 	cards := newCard()
@@ -16,12 +12,9 @@ func main() {
 	hand.print()
 	remainingCards.print()
 
-	cards2 := newCard()
-	fmt.Println(cards2.toString())
-
 	// for people 'class'
-	// people := newPeopleGroup()
-	// people.print()
+	people := newPeopleGroup()
+	people.print()
 
 	// run it with command:
 	// go run main.go deck.go people.go
