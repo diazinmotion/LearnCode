@@ -5,9 +5,10 @@ func main() {
 	cards := newDeck()
 	// cardsInHand, remainingCards := deal(cards, 5)
 
-	// cardsInHand.print()
-	// remainingCards.print()
-
-	// strCards := cards.toString()
+	// save cards to file
 	cards.saveToFile("my_game_card")
+
+	// read the file
+	cards2 := readTheFile("my_game_card")
+	cards2.print()
 }
