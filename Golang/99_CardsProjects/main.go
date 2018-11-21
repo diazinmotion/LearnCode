@@ -5,6 +5,9 @@ func main() {
 	cards := newDeck()
 	// cardsInHand, remainingCards := deal(cards, 5)
 
+	// shuffle the cards
+	cards.shuffle()
+
 	// save cards to file
 	cards.saveToFile("my_game_card")
 
