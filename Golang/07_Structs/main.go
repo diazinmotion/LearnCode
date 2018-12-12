@@ -6,7 +6,7 @@ import "fmt"
 type person struct {
 	firstName string
 	lastName  string
-	contact   contactInfo
+	contactInfo
 }
 
 // 2nd struct
@@ -27,7 +27,7 @@ func main() {
 	alex := person{
 		firstName: "Alex",
 		lastName:  "Anderson",
-		contact: contactInfo{
+		contactInfo: contactInfo{
 			email:   "alex@gmail.com",
 			zipCode: 90222,
 		},
@@ -46,9 +46,32 @@ func main() {
 	jim := person{
 		firstName: "Jim",
 		lastName:  "Party",
-		contact: contactInfo{
+		contactInfo: contactInfo{
 			email:   "jim@gmail.com",
 			zipCode: 94000,
 		},
 	}
+
+	// we can use receiver too
+	fmt.Println("\nUSING RECEIVER")
+	jim.updateName("Jimmy") // 1. this will not change the name
+
+	// change name via pointer
+	jimPointer := &jim // get pointer address
+	jimPointer.updateName("Jimmy")
+
+	jim.print()
+}
+
+// func (p person) updateName(newFirstName string) {
+// 	p.firstName = newFirstName // 2. with this logic
+// }
+
+func (pointerToPerson *person) updateName(newFirstName string) {
+	(*pointerToPerson).firstName = newFirstName
+}
+
+// receiver for struct
+func (p person) print() {
+	fmt.Println(p)
 }
