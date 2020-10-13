@@ -7,6 +7,10 @@ void main(List<String> args) {
 
     // loop is a standar c style in dart
     for (var i = 0; i < sampleArray.length; i++) {
+        if(sampleArray[i] == 20){
+            continue;
+        }
+        
         print('Hello World $i = ${ sampleArray[i] }');
     }
 
