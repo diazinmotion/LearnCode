@@ -1,4 +1,9 @@
 import 'dart:io';
+import 'dart:math';
+
+class SimpleError implements Exception {
+    String error() => 'This is a simple Error.';
+}
 
 main(List<String> args) {
     // this example will show how to use conditional and error handling
@@ -62,5 +67,54 @@ main(List<String> args) {
         print(availableType[aircraftType]);
     }else{
         print('Not Available');
+    }
+
+    classErrorException();
+    // errorHandling();
+}
+
+void errorHandling(){
+    // this example will show how to use conditional and error handling
+    print('========================================\nThis is Error Handling Section');
+    try {
+        Random r = new Random();
+        num hasilNumber         = 0;
+        
+        stdout.write('Try entering numeric value [0-9], or character [a-z A-Z] to test the error\n');
+        stdout.write('Enter a number: ');
+        final randomNumber      = r.nextInt(100);
+        final int userNumber    = int.parse(stdin.readLineSync());
+        
+        hasilNumber = randomNumber ~/ userNumber;
+        print('Magic Number $randomNumber, and the result is $hasilNumber');
+    } on IntegerDivisionByZeroException {
+        // this is for specific error (exception) zero division
+        print('ERROR: Cannot divided by zero.');
+    } on FormatException{
+        // this is invalid data type exception
+        print('ERROR: Invalid value, please use numberic value.');
+    }catch (e){
+        // this is for system generated error
+        print('ERROR: $e');
+    }finally{
+        print('Done.');
+    }
+}
+
+void classErrorException(){
+    try {
+        // this is closure (anonymous function)
+        var f = (age) => {
+            if(age < 10){
+                throw new SimpleError()
+            }else{
+                print('Amazing!')
+            }
+        };
+
+        f(14);
+        f(8);
+    } catch (e) {
+        print(e.error());
     }
 }
