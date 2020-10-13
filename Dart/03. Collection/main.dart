@@ -1,5 +1,5 @@
 
-import 'dart:io';
+import 'dart:math';
 
 void main() {
     // this is an example of list, set, map in dart, basically it's just like an array
@@ -66,4 +66,9 @@ void main() {
     studentHeight.removeWhere((key, value) => key == 'Peter');
     print(studentHeight);
     print(studentHeight.length);
+
+    // iterable
+    Random r = new Random();
+    Iterable<int> a = Iterable.generate(2, (i) => r.nextInt(100));
+    print(a);
 }
