@@ -22,7 +22,7 @@
     "webpack-cli": "^3.1.2"
   },
   "dependencies": {
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "systemjs": "^2.1.1"
   }
 }
