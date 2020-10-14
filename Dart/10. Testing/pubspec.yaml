@@ -1,0 +1,10 @@
+name: LearnCodeDart
+version: 0.0.1
+description: >-
+    This is a sample file just like npm or composer.json in PHP
+homepage: https://yourdomain.com/package
+documentation: https://yourdomain.com/package-documentation
+dependencies:
+    test:
+    random_string:
+    faker:
