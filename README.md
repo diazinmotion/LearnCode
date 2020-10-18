@@ -15,6 +15,11 @@ A repository for learning new programming or technology as self study materials.
   <dd>
     Python is an interpreted high-level programming language for general-purpose programming. Created by Guido van Rossum and first released in 1991, Python has a design philosophy that emphasizes code readability, notably using significant whitespace. It provides constructs that enable clear programming on both small and large scales.
   </dd>
+  <dt><a href="https://dart.dev/"></a></dt>
+  <dd>
+    Dart is a client-optimized programming language for apps on multiple platforms. It is developed by Google and is used to build mobile, desktop, server, and web applications.
+    Dart is an object-oriented, class-based, garbage-collected language with C-style syntax. Dart can compile to either native code or JavaScript. It supports interfaces, mixins, abstract classes, reified generics, and type inference. One of the most well-known usage of dart is flutter framework.
+  </dd>
 </dl>
 
 ## Learning Sources
@@ -23,6 +28,7 @@ A repository for learning new programming or technology as self study materials.
     * https://www.udemy.com/the-total-kotlin-course-learn-kotlin-today/learn/v4
   * Python
     * https://www.youtube.com/watch?v=rfscVS0vtbw
+    * https://www.dicoding.com/academies/86
 	* https://www.sololearn.com/Play/Python
   * Docker
     * https://www.youtube.com/watch?v=Kyx2PsuwomE
@@ -31,5 +37,5 @@ A repository for learning new programming or technology as self study materials.
     * https://www.youtube.com/watch?v=Qw9zlE3t8Ko
   * TypeScript
     * https://www.udemy.com/understanding-typescript
-  * Golang
-  * Electron
+  * Dart
+    * https://www.dicoding.com/academies/191
